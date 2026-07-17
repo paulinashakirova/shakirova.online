@@ -1,6 +1,6 @@
 const http = require('http');
 http.createServer(function (req, res) {
-res.write("I ll be a full stack engineer!");
+res.write("I wonder what my CI does");
 	res.end();
 }
 ).listen(3000);

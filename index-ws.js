@@ -1,4 +1,5 @@
 const express = require('express');
+
 const server = require('http').createServer();
 const app = express();
 
@@ -13,7 +14,7 @@ server.listen(3000, function() {
 })
 
 /** Begin WebSocket */
-const WebSocketServer = require('ws').Server;
+const { Server : WebSocketServer, WebSocket} = require('ws');
 const wss = new WebSocketServer({ server: server });
 
 wss.on('connection', function connection(ws){
